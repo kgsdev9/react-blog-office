@@ -1,30 +1,27 @@
 import { Outlet, Link } from "react-router-dom";
-import Navbar from "react-bootstrap/Navbar"; 
 
-export default function NavBar() {
+export default function ListeArticle() {
     return (
       <>   
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link to={`/`} className="navbar-brand">KGS BLOG</Link>
-                   
+            <aside className="navbar navbar-expand-lg navbar-light bg-light">
+                <Link to={`/`} className="navbar-brand">Dashboard</Link>
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                        <Link to={`/blog`} className="nav-link">Articles </Link>
+                        <Link  className="nav-link">Gestion categories </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to={`/about`}>Apropos</Link>
+                            <Link className="nav-link" >Gestion articles</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to={`/dashboard`}>Dashboard</Link>
+                            <Link className="nav-link" >Gestion utilisateurs</Link>
                         </li>
                         </ul>
                     </div>
-            </nav>
+            </aside>
             <main>
                 <Outlet></Outlet>
             </main>
-        
       </>
     );
   }

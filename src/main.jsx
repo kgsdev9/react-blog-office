@@ -5,6 +5,9 @@ import NavBar from './Pages/NavBar.jsx'//importation de la navBar
 import Blog from './Pages/Home/blog.jsx'
 import ErrorPage from './errorPage.jsx'
 import About from './Pages/About.jsx'
+import 'bootstrap/dist/css/bootstrap.css'
+import BlogDetail from './Pages/Home/BlogDetail.jsx'
+import ListeArticle from './Pages/Dashboard/articles/ListeArticle.jsx'
 
 const router =  createBrowserRouter([
     {
@@ -16,13 +19,24 @@ const router =  createBrowserRouter([
           path:"/blog",
           element: <Blog />,
         },
+        {
+          path: "about",
+          element: <About />,
+        },
+
+        {
+          path: "detail/:id",
+          element: <BlogDetail />,
+        },
+
       ],
     },
-
     {
-      path: "about",
-      element: <About />,
-    },
+      path :'/dashboard',
+      element:  <ListeArticle />,
+      
+    }
+
 ])
 
 

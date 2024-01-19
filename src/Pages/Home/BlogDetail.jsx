@@ -1,16 +1,12 @@
-const BlogDetail = () => {
-    return (  
-        <h1>La page detail des article</h1>
-    );
+import { useParams } from "react-router-dom";
 
-    const detail =  [
-        {
-            id:1,
-            title:"Comment refactoriser un controller avec react",
-           description:"Ma premiere page de gestion des entreprises",
-           category: "Informatique-Programmation"
-        }
-    ]
+const BlogDetail = () => {
+
+    const {id}  =  useParams();
+
+    return (  
+        <h1>La page detail des article {id}</h1>
+    );
 }
  
 export default BlogDetail
