@@ -1,7 +1,7 @@
 
 function App () {
 
-  return  <h1>Bienvenue sur kgs informatique je vous montrerai comment mettre en place un systeme de routage avec react </h1>
+  return  <h1>Je developpe ma premiere de gestion d'entreprise avec react </h1>
 
 }
 

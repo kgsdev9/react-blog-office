@@ -1,41 +1,48 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import NavBar from './Pages/NavBar.jsx'//importation de la navBar 
-import Blog from './Pages/Home/blog.jsx'
 import ErrorPage from './errorPage.jsx'
-import About from './Pages/About.jsx'
-import 'bootstrap/dist/css/bootstrap.css'
-import BlogDetail from './Pages/Home/BlogDetail.jsx'
-import ListeArticle from './Pages/Dashboard/articles/ListeArticle.jsx'
+import Dashboard from './Dashboard/index.jsx';
+import Login from './Auth/login.jsx';
+import Register from './Auth/register.jsx';
+import ListeUsers from './Dashboard/Users/index.jsx';
+import CreateUsers from './Dashboard/Users/create.jsx';
 
 const router =  createBrowserRouter([
     {
       path:"/",
-      element: <NavBar />,
+      element: <Dashboard />,
       errorElement: <ErrorPage />,
-      children: [
-        {
-          path:"/blog",
-          element: <Blog />,
-        },
-        {
-          path: "about",
-          element: <About />,
-        },
-
-        {
-          path: "detail/:id",
-          element: <BlogDetail />,
-        },
-
-      ],
     },
     {
-      path :'/dashboard',
-      element:  <ListeArticle />,
-      
-    }
+      path :'/sss', 
+      element: "seess"
+    },
+
+    {
+      path :'/connexion', 
+      element: <Login />
+    },
+
+    {
+      path :'/inscription', 
+      element: <Register />
+    },
+
+    {
+      path :'/users/liste', 
+      element: <ListeUsers />
+    },
+
+    {
+      path :'/users/create', 
+      element: <CreateUsers />
+    },
+
+    {
+      path :'/users/create', 
+      element: <CreateUsers />
+    },
 
 ])
 
